@@ -3,7 +3,8 @@
 int **createMatrix(size_t m, size_t n);
 void clearMatrix(int **matrix, size_t m);
 
-int main() {
+int main()
+{
   size_t m = 0;
   size_t n = 0;
   std::cin >> m >> n;
@@ -43,7 +44,8 @@ int main() {
   return 0;
 }
 
-int **createMatrix(size_t m, size_t n) {
+int **createMatrix(size_t m, size_t n)
+{
   int **matrix = new int *[m] {};
 
   try {
@@ -62,7 +64,8 @@ int **createMatrix(size_t m, size_t n) {
   return matrix;
 }
 
-void clearMatrix(int **matrix, size_t m) {
+void clearMatrix(int **matrix, size_t m)
+{
   for (size_t i = 0; i < m; i++) {
     delete[] matrix[i];
   }
