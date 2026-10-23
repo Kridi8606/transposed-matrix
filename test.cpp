@@ -72,6 +72,14 @@ int **concat_rows(
 {
     nullptr_check(lhs);
     nullptr_check(rhs);
+    for (size_t i = 0; i < n1; i++)
+    {
+        nullptr_check(lhs[i]);
+    }
+    for (size_t i = 0; i < n2; i++)
+    {
+        nullptr_check(rhs[i]);
+    }
 
     const size_t n = (n1 > n2) ? n1 : n2;
     int **res = nullptr;
